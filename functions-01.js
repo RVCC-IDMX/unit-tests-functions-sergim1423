@@ -16,7 +16,9 @@
  * example: 'Buzz Lightyear' returns 'Lightyear, Buzz'
  */
 function nameShuffle(str) {
-  // write your code here & return value
+  console.log('I am here');
+  console.log(str.split(' ').reverse().join(','));
+  return str.split(' ').reverse().join(',');
 }
 
 /**
@@ -34,7 +36,10 @@ function nameShuffle(str) {
  * example: '&', '&' returns true
  */
 function isStrangePair(str1, str2) {
-  // write your code here & return value
+  if (str1.charAt(0) === str2.charAt(str2.length - 1)) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -46,7 +51,7 @@ function isStrangePair(str1, str2) {
  * example: '98.6%' returns 0.986
  */
 function convertToDecimal(percent) {
-  // write your code here & return value
+
 }
 
 /**
@@ -78,5 +83,5 @@ module.exports = {
   isStrangePair,
   convertToDecimal,
   checkSameSum,
-  saveLogin
+  saveLogin,
 };
