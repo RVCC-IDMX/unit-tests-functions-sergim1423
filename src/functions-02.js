@@ -69,7 +69,7 @@ const store = {
    * @returns {string} - the name of the store
    */
   getName() {
-    // write your code here & return value
+    return store;
   },
   /**
    * Returns the inventory of the store

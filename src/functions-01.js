@@ -16,7 +16,7 @@
  * example: 'Buzz Lightyear' returns 'Lightyear, Buzz'
  */
 function nameShuffle(str) {
-  // write your code here & return value
+  return str.split(' ').reverse().join(', ');
 }
 
 /**
@@ -34,7 +34,10 @@ function nameShuffle(str) {
  * example: '&', '&' returns true
  */
 function isStrangePair(str1, str2) {
-  // write your code here & return value
+  if (str1.charAt(0) === str2.charAt(str2.length - 1)) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -46,7 +49,7 @@ function isStrangePair(str1, str2) {
  * example: '98.6%' returns 0.986
  */
 function convertToDecimal(percent) {
-  // write your code here & return value
+  return parseFloat(percent) / 100;
 }
 
 /**
@@ -59,7 +62,20 @@ function convertToDecimal(percent) {
  * example: [1, 2, 3, 4], [4, 3, 2, 1, 5] returns false
  */
 function checkSameSum(a1, a2) {
-  // write your code here & return value
+  let sum = 0;
+  let sum2 = 0;
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of a1) {
+    sum += value;
+  }
+  // eslint-disable-next-line no-restricted-syntax
+  for (const value of a2) {
+    sum2 += value;
+  }
+  if (sum === sum2) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -70,7 +86,9 @@ function checkSameSum(a1, a2) {
  * must use a closure to save the username
  */
 function saveLogin(name) {
-  // write your code here
+  function findLogin() {
+
+  }
 }
 
 module.exports = {
@@ -78,5 +96,5 @@ module.exports = {
   isStrangePair,
   convertToDecimal,
   checkSameSum,
-  saveLogin
+  saveLogin,
 };
