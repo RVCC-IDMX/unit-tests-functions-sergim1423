@@ -15,6 +15,7 @@
  * example: "John Smith" returns "Smith, John"
  * example: 'Buzz Lightyear' returns 'Lightyear, Buzz'
  */
+
 function nameShuffle(str) {
   return str.split(' ').reverse().join(', ');
 }
